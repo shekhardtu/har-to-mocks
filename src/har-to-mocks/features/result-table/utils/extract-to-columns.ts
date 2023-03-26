@@ -10,7 +10,7 @@ export interface Columns {
 
 export const extractToColumns = (entry: Entry): Columns => {
   const parsedUrl = new URL(entry.request.url);
-  const lastPartOfPath = parsedUrl.pathname.split('/').pop() as string;
+  const lastPartOfPath = parsedUrl.search || (parsedUrl.pathname.split('/').pop() as string);
   return {
     name: lastPartOfPath,
     method: entry.request.method,
