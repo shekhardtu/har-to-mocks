@@ -11,11 +11,8 @@
     "removeComments": true,
     "declarationDir": "./lib_types",
     "resolveJsonModule": true,
+    "skipLibCheck": true
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "src/**/*.test.ts"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test.ts"]
 }

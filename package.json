@@ -1,8 +1,8 @@
 {
-  "name": "har-to-mocks",
-  "version": "0.0.0",
-  "description": "Extract response from .har file and create JSON mocks for mock server.",
-  "author": "Peter Knezek @peterknezek",
+  "name": "har-to-json",
+  "version": "0.0.2",
+  "description": "Extract response from .har file and create JSON mocks for mock server. With support of query param",
+  "author": "Hari Shekhar",
   "scripts": {
     "prepack": "rm -rf lib && rm -rf lib_types && tsc -b",
     "test": "jest --watchAll",
@@ -14,9 +14,11 @@
     "lint:fix": "eslint \"src/**/*.{js,ts,tsx}\" --fix"
   },
   "bin": {
-    "har-to-mocks": "./bin/run"
+    "har-to-mocks": "bin/run"
   },
-  "bugs": "https://github.com/peterknezek/har-to-mocks/issues",
+  "bugs": {
+    "url": "https://github.com/shekhardtu/har-to-mocks/issues"
+  },
   "dependencies": {
     "@oclif/command": "^1.8.0",
     "cli-ux": "^5.6.7",
@@ -60,7 +62,7 @@
     "/bin",
     "/lib"
   ],
-  "homepage": "https://github.com/peterknezek/har-to-mocks",
+  "homepage": "https://github.com/shekhardtu/har-to-mocks",
   "keywords": [
     "cli",
     "har",
@@ -76,12 +78,18 @@
   "oclif": {
     "bin": "har-to-mocks"
   },
-  "repository": "peterknezek/har-to-mocks",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shekhardtu/har-to-mocks.git"
+  },
   "types": "lib/index.d.ts",
   "release": {
     "branches": [
       "master",
       "next"
     ]
+  },
+  "directories": {
+    "test": "tests"
   }
 }
