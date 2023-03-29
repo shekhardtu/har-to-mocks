@@ -53,7 +53,7 @@ class HarToMocks extends Command {
 
     if (args.file && typeof args.file === 'string') {
       const data = (await readJson(args.file)) as Har;
-      process.extract(data, { method: usedFlags.method, resourceType: usedFlags.type, url: usedFlags.url });
+      process.extract(data || [], { method: usedFlags.method, resourceType: usedFlags.type, url: usedFlags.url });
     }
 
     if (args.to && typeof args.to === 'string') {
