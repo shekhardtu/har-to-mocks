@@ -1,6 +1,6 @@
 {
   "name": "har-to-json",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Extract response from .har file and create JSON mocks for mock server. With support of query param",
   "author": "Hari Shekhar",
   "scripts": {
